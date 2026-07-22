@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
   "type": "module",
-  "private": true,
+  "private": false,
+  "repository": "https://github.com/tzanella/portfolio",
+  "author": "XDuke",
+  
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
