@@ -1,0 +1,94 @@
+{
+  "common": {
+    "close": "Fechar"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Olá, eu sou XDuke",
+    "subtitle_question": "Quer me conhecer um pouco melhor?",
+    "cta": "Ver meu Trabalho"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "name_prefix": "Túlio Zanella / ",
+    "age": "Idade: {age} anos",
+    "bio": "Sou autodidata em desenvolvimento web e me especializei em tecnologias de back-end como Node.js, Express, PHP e MySQL. Aprendi tudo sozinho, estudando por conta própria e criando projetos que resolvem problemas reais.",
+    "certificates": "Ver Certificados",
+    "certificates_modal_title": "Meus Certificados"
+  },
+  "skills": {
+    "title": "Minhas Habilidades",
+    "proficiency": {
+      "expert": "Especialista",
+      "advanced": "Avançado",
+      "intermediate": "Intermediário",
+      "beginner": "Iniciante"
+    },
+    "categories": {
+      "Backend": "Backend",
+      "Frontend": "Frontend",
+      "Database": "Banco de Dados",
+      "Infrastructure": "Infraestrutura",
+      "Languages": "Idiomas"
+    },
+    "descriptions": {
+      "Node.js": "Proficiente na construção de serviços de backend escaláveis, APIs REST e microsserviços.",
+      "TypeScript": "Forte experiência em tipagem, padrões de design e arquitetura de aplicações.",
+      "Express / NestJS": "Experiência em frameworks para lógica de backend estruturada e pronta para produção.",
+      "Vue.js / Nuxt 3": "Especialista em composition API, gerenciamento de estado, layouts, SSR e renderização híbrida.",
+      "JavaScript": "Profundo conhecimento em JS moderno, fluxos assíncronos, manipulação do DOM e otimização de performance.",
+      "Tailwind CSS": "Altamente qualificado em design utility-first, sistemas de estilização e layouts responsivos.",
+      "PostgreSQL": "Modelagem de dados relacionais, consultas avançadas, índices e otimizações de esquema.",
+      "MongoDB": "Estruturas de documentos NoSQL, agregações e integrações de banco de dados.",
+      "Redis": "Estratégias de cache em memória, arquitetura pub/sub e gerenciamento de sessões.",
+      "Docker": "Conteinerização, configuração de ambientes e fluxos de implantação de contêineres.",
+      "Git & GitHub": "Controle de versão, gerenciamento de ramificações, fluxos colaborativos e pipelines CI/CD.",
+      "Linux": "Administração de servidores, shell scripting, hospedagem e ferramentas de linha de comando.",
+      "Portuguese": "Fluência nativa.",
+      "English": "Proficiência profissional de conversação.",
+      "Spanish": "Conhecimento básico.",
+      "Italian": "Novo idioma que estou aprendendo :)"
+    }
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "view_details": "Ver Detalhes",
+    "visit_project": "Visitar Projeto",
+    "no_description": "Nenhuma descrição disponível para este projeto.",
+    "error_message": "Falha ao carregar os projetos. Por favor, tente novamente mais tarde.",
+    "descriptions": {
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "info_title": "Informações de Contato",
+    "subtitle": "Sinta-se à vontade para entrar em contato para colaborações ou perguntas sobre projetos.",
+    "email": "E-mail",
+    "phone": "Whatsapp & Telefone",
+    "location": "Localização",
+    "name": "Nome",
+    "email_label": "Endereço de E-mail",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Falha ao enviar a mensagem. Tente novamente.",
+    "response_time": "O tempo de resposta é geralmente de até 24 horas."
+  },
+  "footer": {
+    "bio": "Desenvolvedor de Software.",
+    "quick_links": "Links Rápidos",
+    "contact_info": "Informações de Contato",
+    "follow_me": "Siga-me",
+    "wakatime_stats": "Estatísticas Wakatime",
+    "view_profile": "Ver Perfil",
+    "rights_reserved": "Todos os direitos reservados.",
+    "built_with": "Desenvolvido com Nuxt 4 & TailwindCSS"
+  }
+}

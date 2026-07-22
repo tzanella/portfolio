@@ -1,0 +1,94 @@
+{
+  "common": {
+    "close": "Chiudi"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Ciao, sono XDuke",
+    "subtitle_question": "Vuoi conoscermi un po' meglio?",
+    "cta": "Guarda il mio Lavoro"
+  },
+  "about": {
+    "title": "Su di me",
+    "name_prefix": "Túlio Zanella / ",
+    "age": "Età: {age} anni",
+    "bio": "Sono autodidatta nello sviluppo web e mi specializzo in tecnologie di back-end come Node.js, Express, PHP e MySQL. Ho imparato tutto da solo, studiando autonomamente e creando progetti che risolvono problemi reali.",
+    "certificates": "Vedi Certificati",
+    "certificates_modal_title": "I Miei Certificati"
+  },
+  "skills": {
+    "title": "Le mie Competenze",
+    "proficiency": {
+      "expert": "Esperto",
+      "advanced": "Avanzato",
+      "intermediate": "Intermedio",
+      "beginner": "Principiante"
+    },
+    "categories": {
+      "Backend": "Backend",
+      "Frontend": "Frontend",
+      "Database": "Database",
+      "Infrastructure": "Infrastruttura",
+      "Languages": "Lingue"
+    },
+    "descriptions": {
+      "Node.js": "Competente nella creazione de servizi backend scalabili, API REST e microservizi.",
+      "TypeScript": "Forte esperienza nella tipizzazione, design pattern e architettura software.",
+      "Express / NestJS": "Esperienza nell'uso di framework per logica backend strutturata e pronta per la produzione.",
+      "Vue.js / Nuxt 3": "Esperto in composition API, gestione dello stato, layout, SSR e rendering ibrido.",
+      "JavaScript": "Profonda conoscenza di JS moderno, flussi asincroni, manipolazione DOM e ottimizzazione delle prestazioni.",
+      "Tailwind CSS": "Altamente qualificato nel design utility-first, sistemi di stile e layout responsive.",
+      "PostgreSQL": "Modellazione di database relazionali, query avanzate, indici e ottimizzazione dello schema.",
+      "MongoDB": "Strutture di documenti NoSQL, aggregazioni e integrazioni di database.",
+      "Redis": "Strategie di caching in-memory, architettura pub/sub e gestione delle sessioni.",
+      "Docker": "Containerizzazione, configurazione dell'ambiente e flussi di deployment.",
+      "Git & GitHub": "Controllo di versione, gestione dei branch, workflow collaborativi e pipeline CI/CD.",
+      "Linux": "Amministrazione server, shell scripting, hosting e strumenti da riga di comando.",
+      "Portuguese": "Madrelingua.",
+      "English": "Competenza professionale nella conversazione.",
+      "Spanish": "Conoscenza di base.",
+      "Italian": "Nuova lingua che sto imparando :)"
+    }
+  },
+  "projects": {
+    "title": "Progetti in Evidenza",
+    "view_details": "Vedi Dettagli",
+    "visit_project": "Visita il Progetto",
+    "no_description": "Nessuna descrizione disponibile per questo progetto.",
+    "error_message": "Impossibile caricare i progetti. Riprova più tardi.",
+    "descriptions": {
+    }
+  },
+  "contact": {
+    "title": "Mettiti in Contatto",
+    "info_title": "Informazioni di Contatto",
+    "subtitle": "Non esitare a contattarmi per collaborazioni o domande sui progetti.",
+    "email": "E-mail",
+    "phone": "Whatsapp & Telefono",
+    "location": "Ubicazione",
+    "name": "Nome",
+    "email_label": "Indirizzo Email",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "send": "Invia Messaggio",
+    "success": "Messaggio inviato con successo!",
+    "error": "Errore durante l'invio del messaggio. Riprova.",
+    "response_time": "Il tempo di risposta è solitamente entro 24 ore."
+  },
+  "footer": {
+    "bio": "Sviluppatore di Software",
+    "quick_links": "Link Rapidi",
+    "contact_info": "Informazioni di Contatto",
+    "follow_me": "Seguimi",
+    "wakatime_stats": "Statistiche Wakatime",
+    "view_profile": "Vedi Profilo",
+    "rights_reserved": "Tutti i diritti riservati.",
+    "built_with": "Costruito con Nuxt 4 & TailwindCSS"
+  }
+}

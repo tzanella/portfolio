@@ -1,0 +1,94 @@
+{
+  "common": {
+    "close": "Cerrar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, soy XDuke",
+    "subtitle_question": "¿Quieres conocerme un poco mejor?",
+    "cta": "Ver mi Trabajo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "name_prefix": "Túlio Zanella / ",
+    "age": "Edad: {age} años",
+    "bio": "Soy autodidacta en desarrollo web y me especializo en tecnologías de back-end como Node.js, Express, PHP y MySQL. Aprendí todo por mi cuenta, estudiando por mi cuenta y creando proyectos que resuelven problemas reales.",
+    "certificates": "Ver Certificados",
+    "certificates_modal_title": "Mis Certificados"
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "proficiency": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "beginner": "Principiante"
+    },
+    "categories": {
+      "Backend": "Backend",
+      "Frontend": "Frontend",
+      "Database": "Base de Datos",
+      "Infrastructure": "Infraestructura",
+      "Languages": "Idiomas"
+    },
+    "descriptions": {
+      "Node.js": "Competente en la construcción de servicios backend escalables, APIs REST y microservicios.",
+      "TypeScript": "Sólida experiencia en tipado, patrones de diseño y arquitectura de aplicaciones.",
+      "Express / NestJS": "Experiencia en frameworks para lógica backend estructurada y lista para producción.",
+      "Vue.js / Nuxt 3": "Experto en composition API, gestión de estado, layouts, SSR y renderizado híbrido.",
+      "JavaScript": "Profundo conocimiento de JS moderno, flujos asíncronos, manipulación del DOM y optimización de rendimiento.",
+      "Tailwind CSS": "Altamente capacitado en diseño utility-first, sistemas de estilo y layouts responsivos.",
+      "PostgreSQL": "Modelado de datos relacionales, consultas avanzadas, índices y optimizaciones de esquema.",
+      "MongoDB": "Estructuras de documentos NoSQL, agregaciones e integraciones de bases de datos.",
+      "Redis": "Estrategias de almacenamiento en caché en memoria, arquitectura pub/sub y gestión de sesiones.",
+      "Docker": "Contenedores, configuración de entornos y flujos de implementación de contenedores.",
+      "Git & GitHub": "Control de versiones, gestión de ramas, flujos colaborativos y pipelines CI/CD.",
+      "Linux": "Administración de servidores, shell scripting, hosting y herramientas de línea de comandos.",
+      "Portuguese": "Fluidez nativa.",
+      "English": "Competencia conversacional.",
+      "Spanish": "Conocimiento básico.",
+      "Italian": "Nuevo idioma que estoy aprendiendo :)"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "view_details": "Ver Detalles",
+    "visit_project": "Visitar Proyecto",
+    "no_description": "No hay descripción disponible para este proyecto.",
+    "error_message": "Error al cargar los proyectos. Por favor, inténtelo de nuevo más tarde.",
+    "descriptions": {
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "info_title": "Información de Contacto",
+    "subtitle": "No dudes en ponerte en contacto para colaboraciones o preguntas sobre proyectos.",
+    "email": "Correo electrónico",
+    "phone": "Whatsapp & Teléfono",
+    "location": "Ubicación",
+    "name": "Nombre",
+    "email_label": "Dirección de Correo",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+    "response_time": "El tiempo de respuesta suele ser de 24 horas."
+  },
+  "footer": {
+    "bio": "Desarrollador de Software",
+    "quick_links": "Enlaces Rápidos",
+    "contact_info": "Información de Contacto",
+    "follow_me": "Sígueme",
+    "wakatime_stats": "Estadísticas Wakatime",
+    "view_profile": "Ver Perfil",
+    "rights_reserved": "Todos los derechos reservados.",
+    "built_with": "Creado con Nuxt 4 & TailwindCSS"
+  }
+}

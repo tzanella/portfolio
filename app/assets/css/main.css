@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-space-dark text-slate-200 overflow-x-hidden font-sans;
+}
+
+.glass {
+  @apply bg-[#0e0720]/50 backdrop-blur-xl border border-white/5 shadow-2xl rounded-2xl transition-all duration-300;
+}
+
+.glass:hover {
+  @apply border-accent-purple/20 shadow-[0_0_30px_rgba(139,92,246,0.15)];
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-space-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-purple/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-purple/60;
+}
