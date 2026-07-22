@@ -23,6 +23,16 @@ bun install
 npm install
 ```
 
+## Environment variables
+
+To use the contact form you need will need a [Cloudflare Account](https://www.cloudflare.com/) to use [Turnstile Captcha](https://www.cloudflare.com/turnstile/) and you also need to setup a discord server and [Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to receive the messages. After that you need to add the following environment variables to the `.env` file:
+
+```env
+NUXT_TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+NUXT_PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA
+NUXT_DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
@@ -61,3 +71,5 @@ npm run preview
 ## Deploying to a Host
 I recommend you to use [Netlify](https://www.netlify.com/) but you also can use [Vercel](https://vercel.com/) to deploy this portfolio.
 
+## Fork
+You can fork this repo and use it for your portfolio, just remember to change the data in the `app/utils/profileData.ts` file and the .env file. Also, I would appreciate if you give me credits by leaving a link to my portfolio in your portfolio.
