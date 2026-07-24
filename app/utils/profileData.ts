@@ -172,6 +172,7 @@ export const profileData = {
   ],
   projects: [
     { type: "github", url: "https://github.com/tzanella/zen-sounds-mod" },
+    { type: "github", url: "https://github.com/tzanella/portfolio" },
     { type: "github", url: "https://github.com/tzanella/nubank-api-pix" },
     { type: "github", url: "https://github.com/tzanella/swc-library-website" },
     { type: "github", url: "https://github.com/tzanella/ghost-app" },
