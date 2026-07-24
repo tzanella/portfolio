@@ -24,14 +24,52 @@ npm install
 ```
 
 ## Environment variables
-
-To use the contact form you need will need a [Cloudflare Account](https://www.cloudflare.com/) to use [Turnstile Captcha](https://www.cloudflare.com/turnstile/) and you also need to setup a discord server and [Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to receive the messages. After that you need to add the following environment variables to the `.env` file:
-
+ 
+To use the contact form you will need a [Cloudflare Account](https://www.cloudflare.com/) to use [Turnstile Captcha](https://www.cloudflare.com/turnstile/), and you also need to set up a Discord server and [Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to receive the messages.
+ 
+After that, add the following environment variables to your `.env` file:
+ 
 ```env
 NUXT_TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
 NUXT_PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA
 NUXT_DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+NUXT_LASTFM_API_KEY=...
 ```
+ 
+### Last.fm "Now Playing" integration
+ 
+The site can also display what you're currently listening to in real time, using the [Last.fm API](https://www.last.fm/api).
+ 
+To set this up:
+ 
+1. Get a Last.fm API key by creating an API account [here](https://www.last.fm/api/account/create). This will give you the `NUXT_LASTFM_API_KEY` value used above.
+2. Update your user info in `utils/profileData.ts`, replacing the values with your own Last.fm username, WakaTime user ID, and social links:
+```ts
+socials: {
+  instagram: "https://instagram.com/your_username",
+  github: "https://github.com/your_username",
+  wakatime: "https://wakatime.com/@your_username",
+  discord: "https://discordapp.com/users/your_discord_id",
+  lastfm: "https://www.last.fm/user/your_lastfm_username"
+},
+apis: {
+  wakatime: {
+    stats: "https://wakatime.com/api/v1/users/your_wakatime_user_id/stats"
+  },
+  lastfm: {
+    getRecentTracks: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=your_lastfm_username&api_key={lastfm_api_key}&format=json",
+    getTrackInfo: "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key={lastfm_api_key}&mbid={mbid}&format=json"
+  },
+},
+```
+ 
+- `socials.lastfm`: link to your public Last.fm profile.
+- `apis.wakatime.stats`: your WakaTime stats endpoint, using your WakaTime user ID.
+- `apis.lastfm.getRecentTracks`: fetches your most recently played (or currently playing) track. Replace `user` with your Last.fm username.
+- `apis.lastfm.getTrackInfo`: fetches extra info about a specific track by its MBID.
+> **Note:** the `{lastfm_api_key}` placeholder in the URLs is automatically replaced at runtime with the value of `NUXT_LASTFM_API_KEY` from your `.env` file — you don't need to hardcode it here.
+ 
+
 
 ## Development Server
 

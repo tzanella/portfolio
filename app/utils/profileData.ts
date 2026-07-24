@@ -17,6 +17,16 @@ export const profileData = {
     github: "https://github.com/tzanella",
     wakatime: "https://wakatime.com/@XDuke",
     discord: "https://discordapp.com/users/816775306115285073",
+    lastfm: "https://www.last.fm/user/XDuke_br"
+  },
+  apis: {
+    wakatime: {
+      stats: "https://wakatime.com/api/v1/users/f7fc301e-e4ee-4d46-b45f-5ff61c255b35/stats"
+    },
+    lastfm: {
+      getRecentTracks: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=XDuke_br&api_key={lastfm_api_key}&format=json",
+      getTrackInfo: "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key={lastfm_api_key}&mbid={mbid}&format=json"
+    },
   },
   skills: [
     {

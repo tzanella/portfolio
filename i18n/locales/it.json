@@ -6,6 +6,7 @@
     "home": "Home",
     "about": "Chi sono",
     "skills": "Competenze",
+    "stats": "Statistiche",
     "projects": "Progetti",
     "contact": "Contatti"
   },
@@ -56,6 +57,24 @@
       "Italian": "Nuova lingua che sto imparando :)"
     }
   },
+  "stats": {
+    "title": "Statistiche di Codice",
+    "subtitle": "Dati di produttività in tempo reale estratti tramite WakaTime",
+    "total_time": "Tempo Totale di Codice",
+    "daily_average": "Media Giornaliera",
+    "top_languages": "Linguaggi Principali (> 1 hr)",
+    "activity_breakdown": "Ripartizione delle Attività",
+    "since": "Dati registrati da {range}",
+    "tooltip_info": "Clicca per vedere la data di inizio del tracciamento",
+    "categories": {
+      "Coding": "Codice Manuale",
+      "AI Coding": "Delegato all'IA",
+      "Debugging": "Debugging",
+      "Building": "Build e Compilazione",
+      "Writing Docs": "Documentazione",
+      "Writing Tests": "Scrittura Test"
+    }
+  },
   "projects": {
     "title": "Progetti in Evidenza",
     "view_details": "Vedi Dettagli",
@@ -88,7 +107,20 @@
     "follow_me": "Seguimi",
     "wakatime_stats": "Statistiche Wakatime",
     "view_profile": "Vedi Profilo",
+    "total_time": "Tempo Totale: {time}",
     "rights_reserved": "Tutti i diritti riservati.",
     "built_with": "Costruito con Nuxt 4 & TailwindCSS"
+  },
+  "discord_modal": {
+    "title": "Leggi prima di inviarmi un messaggio diretto su Discord:",
+    "nohello_link": "https://nohello.net/it/",
+    "description": "Per favore, evita di inviare solo un 'ciao' e aspettare risposta. Invia il tuo messaggio e contesto completo al primo invio!",
+    "send_button": "Invia messaggio su Discord"
+  },
+  "lastfm": {
+    "now_playing": "Ascoltando ora"
+  },
+  "preloader": {
+    "loading_profile": "Caricamento Profilo..."
   }
 }

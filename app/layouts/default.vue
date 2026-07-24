@@ -2,6 +2,8 @@
   <div
     class="relative min-h-screen bg-space-dark text-slate-200 overflow-hidden font-sans selection:bg-accent-purple/40"
   >
+    <AppPreloader />
+
     <div class="fixed inset-0 z-0 pointer-events-none">
       <div
         class="absolute inset-0 bg-gradient-to-b from-[#0a0514] to-[#130b29]"
@@ -28,6 +30,7 @@
         <slot />
       </main>
       <AppFooter />
+      <DiscordModal />
     </div>
   </div>
 </template>

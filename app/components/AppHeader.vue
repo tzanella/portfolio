@@ -39,6 +39,12 @@
           >{{ t("nav.skills") }}</a
         >
         <a
+          href="#stats"
+          @click.prevent="scrollTo('stats')"
+          class="hover:text-white transition-colors"
+          >{{ t("nav.stats") }}</a
+        >
+        <a
           href="#projects"
           @click.prevent="scrollTo('projects')"
           class="hover:text-white transition-colors"
@@ -118,6 +124,12 @@
         @click.prevent="scrollTo('skills', true)"
         class="hover:text-white transition-colors text-lg font-semibold text-slate-350"
         >{{ t("nav.skills") }}</a
+      >
+      <a
+        href="#stats"
+        @click.prevent="scrollTo('stats', true)"
+        class="hover:text-white transition-colors text-lg font-semibold text-slate-350"
+        >{{ t("nav.stats") }}</a
       >
       <a
         href="#projects"

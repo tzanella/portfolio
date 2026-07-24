@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -36,6 +35,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     discordWebhookUrl: process.env.NUXT_DISCORD_WEBHOOK_URL,
     turnstileSecretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
+    lastfmApiKey: process.env.NUXT_LASTFM_API_KEY,
     public: {
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
     },

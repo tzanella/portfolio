@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { useWakatimeStats } from '~/composables/useWakatimeStats'
+
 const { t } = useI18n()
+const { open: openDiscordModal } = useDiscordModal()
 const { shortCommit, commit, branch } = useBuildInfo()
+const { stats } = useWakatimeStats()
 
 const displayBranch = computed(() => branch || 'main')
 const displayCommit = computed(() => shortCommit || commit?.slice(0, 7) || 'dev')
@@ -41,6 +45,13 @@ const displayCommit = computed(() => shortCommit || commit?.slice(0, 7) || 'dev'
                 href="#skills"
                 class="hover:text-accent-blue transition-colors"
                 >{{ t("nav.skills") }}</a
+              >
+            </li>
+            <li>
+              <a
+                href="#stats"
+                class="hover:text-accent-blue transition-colors"
+                >{{ t("nav.stats") }}</a
               >
             </li>
             <li>
@@ -101,34 +112,45 @@ const displayCommit = computed(() => shortCommit || commit?.slice(0, 7) || 'dev'
             >
               <Icon name="lucide:github" class="w-5 h-5" />
             </a>
-            <a
-              :href="profileData.socials.discord"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              @click="openDiscordModal"
+              type="button"
+              aria-label="Discord"
               class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-[#5865F2] border border-white/5 transition-all duration-300"
             >
               <Icon name="ic:baseline-discord" class="w-5 h-5" />
+            </button>
+            <a 
+              :href="profileData.socials.lastfm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-[#EA0000] border border-white/5 transition-all duration-300"
+            >
+              <Icon name="streamline-logos:lastfm-logo-block" class="w-5 h-5" />
             </a>
           </div>
 
           <div
-            class="glass px-4 py-3 flex items-center gap-3 border-accent-blue/30 max-w-[200px]"
+            class="glass px-4 py-3 flex items-center gap-3 border-accent-blue/30 max-w-[240px]"
           >
             <Icon
               name="simple-icons:wakatime"
-              class="text-accent-blue w-5 h-5 animate-pulse"
+              class="text-accent-blue w-6 h-6 animate-pulse shrink-0"
             />
             <div class="flex flex-col">
               <span
                 class="text-[10px] text-slate-400 font-bold uppercase tracking-wider"
                 >{{ t("footer.wakatime_stats") }}</span
               >
+              <span v-if="stats?.human_readable_total" class="text-xs font-mono font-semibold text-slate-200">
+                {{ stats.human_readable_total }}
+              </span>
               <a
                 :href="profileData.socials.wakatime"
                 target="_blank"
-                class="text-xs font-bold hover:text-accent-blue transition-colors text-white"
+                class="text-[11px] font-bold hover:text-accent-blue transition-colors text-accent-purple mt-0.5"
               >
-                {{ t("footer.view_profile") }}
+                {{ t("footer.view_profile") }} →
               </a>
             </div>
           </div>

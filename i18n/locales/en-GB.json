@@ -6,6 +6,7 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
+    "stats": "Stats",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -56,6 +57,24 @@
       "Italian": "New language I'm learning :)"
     }
   },
+  "stats": {
+    "title": "Coding Statistics",
+    "subtitle": "Real-time productivity data extracted from WakaTime",
+    "total_time": "Total Code Time",
+    "daily_average": "Daily Average",
+    "top_languages": "Top Languages (> 1 hr)",
+    "activity_breakdown": "Activity Breakdown",
+    "since": "Data recorded since {range}",
+    "tooltip_info": "Click to view tracking start date",
+    "categories": {
+      "Coding": "Manual Coding",
+      "AI Coding": "AI Delegated",
+      "Debugging": "Debugging",
+      "Building": "Building & Compiling",
+      "Writing Docs": "Documentation",
+      "Writing Tests": "Writing Tests"
+    }
+  },
   "projects": {
     "title": "Featured Projects",
     "view_details": "View Details",
@@ -88,7 +107,20 @@
     "follow_me": "Follow Me",
     "wakatime_stats": "Wakatime Stats",
     "view_profile": "View Profile",
+    "total_time": "Total Time: {time}",
     "rights_reserved": "All rights reserved.",
     "built_with": "Built with Nuxt 4 & TailwindCSS"
+  },
+  "discord_modal": {
+    "title": "Read before sending me a direct message on Discord:",
+    "nohello_link": "https://nohello.net/en/",
+    "description": "Please avoid sending just 'hi' and waiting for a response. Send your message and full context in the very first text!",
+    "send_button": "Send message on Discord"
+  },
+  "lastfm": {
+    "now_playing": "Listening now"
+  },
+  "preloader": {
+    "loading_profile": "Loading Profile..."
   }
 }

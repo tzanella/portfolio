@@ -38,16 +38,6 @@
             {{ t("about.bio") }}
           </p>
 
-         <!-- <div>
-            <button
-              @click="isCertModalOpen = true"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-accent-blue to-accent-purple text-white font-bold hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all duration-300"
-            >
-              <Icon name="lucide:award" class="w-5 h-5" />
-              {{ t("about.certificates") }}
-            </button>
-          </div> -->
-
           <div class="flex gap-4 items-center mt-4">
             <a
               :href="profileData.socials.instagram"
@@ -73,13 +63,22 @@
             >
               <Icon name="simple-icons:wakatime" class="w-6 h-6" />
             </a>
-            <a
-              :href="profileData.socials.discord"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              @click="openDiscordModal"
+              type="button"
+              aria-label="Discord"
               class="p-3 bg-[#0e0720]/80 rounded-xl hover:bg-white/10 text-slate-300 hover:text-[#5865F2] border border-white/5 transition-all duration-300"
             >
               <Icon name="ic:baseline-discord" class="w-6 h-6" />
+            </button>
+
+            <a
+              :href="profileData.socials.lastfm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-3 bg-[#0e0720]/80 rounded-xl hover:bg-white/10 text-slate-300 hover:text-[#EA0000] border border-white/5 transition-all duration-300"
+            >
+              <Icon name="streamline-logos:lastfm-logo-block" class="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -107,6 +106,47 @@
                 "
               />
             </div>
+
+            <a
+              v-if="track?.isPlaying"
+              :href="track.url || profileData.socials.lastfm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="absolute bottom-1 right-1 md:bottom-2 md:right-2 z-20 w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#0a0514] border-2 border-accent-purple hover:border-accent-blue shadow-[0_0_25px_rgba(168,85,247,0.6)] hover:shadow-[0_0_35px_rgba(59,130,246,0.8)] transition-all duration-300 hover:scale-110 flex items-center justify-center p-0.5 group"
+              :title="`${track.name} - ${track.artist}${track.album ? ' (' + track.album + ')' : ''}`"
+            >
+              <div class="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-black/80">
+                <img
+                  v-if="track.image"
+                  :src="track.image"
+                  :alt="track.name"
+                  class="w-full h-full object-cover rounded-full group-hover:rotate-12 transition-transform duration-500"
+                />
+                <div v-else class="w-full h-full flex items-center justify-center bg-accent-purple/20 text-white">
+                  <Icon name="streamline-logos:lastfm-logo-block" class="w-8 h-8 text-[#EA0000]" />
+                </div>
+
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+
+                <div class="absolute bottom-1 bg-black/80 backdrop-blur-md px-1.5 py-0.5 rounded-full border border-white/20 flex items-center gap-0.5">
+                  <span class="w-0.5 h-2 bg-accent-purple animate-bounce" style="animation-duration: 0.6s"></span>
+                  <span class="w-0.5 h-3 bg-accent-blue animate-bounce" style="animation-duration: 0.8s"></span>
+                  <span class="w-0.5 h-1.5 bg-emerald-400 animate-bounce" style="animation-duration: 0.5s"></span>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-full right-0 mb-3 z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap p-3 rounded-xl bg-[#0d071a]/95 border border-accent-purple/30 shadow-2xl backdrop-blur-xl flex flex-col gap-0.5"
+              >
+                <div class="flex items-center gap-1.5 text-[10px] uppercase font-bold text-accent-blue tracking-wider">
+                  <Icon name="lucide:disc" class="w-3 h-3 animate-spin" />
+                  <span>{{ t("lastfm.now_playing") }}</span>
+                </div>
+                <div class="font-bold text-xs text-white">{{ track.name }}</div>
+                <div class="text-[11px] text-slate-300 font-medium">{{ track.artist }}</div>
+                <div v-if="track.album" class="text-[10px] text-slate-400 italic">{{ track.album }}</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -121,8 +161,12 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import { useLastfm } from "~/composables/useLastfm";
 
 const { t } = useI18n();
+const { open: openDiscordModal } = useDiscordModal();
+const { track } = useLastfm();
+
 const isCertModalOpen = ref(false);
 const actualAge = computed(() => {
   const now = new Date();

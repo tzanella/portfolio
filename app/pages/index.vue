@@ -3,6 +3,7 @@
     <SectionsSectionHero />
     <SectionsSectionAbout />
     <SectionsSectionSkills />
+    <SectionsSectionStats />
     <SectionsSectionProjects />
     <SectionsSectionContact />
   </div>
