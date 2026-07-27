@@ -18,12 +18,14 @@ export default defineNuxtRouteMiddleware((to) => {
       cookie.value = codeToSet
     }
 
-    const newQuery = { ...to.query }
-    delete newQuery.lg
-
-    return navigateTo({
-      path: to.path,
-      query: newQuery
-    }, { replace: true })
+    if (import.meta.client) {
+      if (codeToSet) {
+        const { setLocale } = useI18n()
+        setLocale(codeToSet)
+      }
+      const url = new URL(window.location.href)
+      url.searchParams.delete('lg')
+      window.history.replaceState({}, '', url.pathname + url.search)
+    }
   }
 })
