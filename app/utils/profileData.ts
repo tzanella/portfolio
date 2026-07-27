@@ -195,7 +195,7 @@ export const profileData = {
       linkText: "Link text"
     } */
 
-      {
+    {
       type: "url",
       url: "https://bh-extintores.netlify.app/",
       name: "BH Extintores Website",

@@ -1,7 +1,7 @@
 export default defineNuxtRouteMiddleware((to) => {
-  const { lang } = to.query
-  if (lang && typeof lang === 'string') {
-    const targetLang = lang.toLowerCase()
+  const { lg } = to.query
+  if (lg && typeof lg === 'string') {
+    const targetLang = lg.toLowerCase()
     let codeToSet = ''
     if (targetLang.startsWith('pt')) {
       codeToSet = 'pt'
@@ -19,7 +19,7 @@ export default defineNuxtRouteMiddleware((to) => {
     }
 
     const newQuery = { ...to.query }
-    delete newQuery.lang
+    delete newQuery.lg
 
     return navigateTo({
       path: to.path,
