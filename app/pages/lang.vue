@@ -3,7 +3,9 @@
 </template>
 
 <script setup>
-definePageMeta({
-  middleware: () => navigateTo('/', { replace: true })
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  navigateTo('/', { replace: true })
 })
 </script>
