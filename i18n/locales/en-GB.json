@@ -77,11 +77,13 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "client_projects_title": "Client Projects",
     "view_details": "View Details",
     "visit_project": "Visit Project",
     "no_description": "No description available for this project.",
     "error_message": "Failed to load projects. Please try again later.",
     "descriptions": {
+      "BH Extintores Website": "Institutional website for the BH Extintores company."
     }
   },
   "contact": {

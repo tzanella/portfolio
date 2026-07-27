@@ -155,12 +155,12 @@ export const profileData = {
           level: 45,
           description: "Conversational working proficiency.",
         },
-        {
+       /* {
           name: "Spanish",
           icon: "circle-flags:es",
           level: 35,
           description: "Basic knowledge.",
-        },
+        }, */
         {
           name: "Italian",
           icon: "circle-flags:it",
@@ -185,7 +185,7 @@ export const profileData = {
   clientProjects: [
     //Just the structure for now
 
-    {
+   /* {
       type: "url | github | none",
       url: "if it's type=url | github ",
       name: "title of the project",
@@ -193,6 +193,16 @@ export const profileData = {
       imageUrl: "path/to/image",
       tools: ["tool1", "tool2", "tool3"],
       linkText: "Link text"
+    } */
+
+      {
+      type: "url",
+      url: "https://bh-extintores.netlify.app/",
+      name: "BH Extintores Website",
+      description: "Site institucional para a empresa BH Extintores.",
+      imageUrl: "/assets/img/clients/bh_extintores.png",
+      tools: ["Vue.js", "Nuxt 3", "Tailwind CSS"],
+      linkText: "Visitar Site"
     }
 
   ], //ToDo: Add my client's projects

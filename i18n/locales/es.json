@@ -77,11 +77,13 @@
   },
   "projects": {
     "title": "Proyectos Destacados",
+    "client_projects_title": "Proyectos de Clientes",
     "view_details": "Ver Detalles",
     "visit_project": "Visitar Proyecto",
     "no_description": "No hay descripción disponible para este proyecto.",
     "error_message": "Error al cargar los proyectos. Por favor, inténtelo de nuevo más tarde.",
     "descriptions": {
+      "BH Extintores Website": "Sitio institucional para la empresa BH Extintores."
     }
   },
   "contact": {

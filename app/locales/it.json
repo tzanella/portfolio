@@ -58,12 +58,14 @@
   },
   "projects": {
     "title": "Progetti in Evidenza",
+    "client_projects_title": "Progetti dei Clienti",
     "view_details": "Vedi Dettagli",
     "visit_project": "Visita il Progetto",
     "no_description": "Nessuna descrizione disponibile per questo progetto.",
     "error_message": "Impossibile caricare i progetti. Riprova più tardi.",
     "descriptions": {
-      "FireHosting v2": "Una piattaforma di hosting web completa e ad alte prestazioni con integrazione di fatturazione, gestione dei server e distribuzioni automatizzate."
+      "FireHosting v2": "Una piattaforma di hosting web completa e ad alte prestazioni con integrazione di fatturazione, gestione dei server e distribuzioni automatizzate.",
+      "BH Extintores Website": "Sito istituzionale per l'azienda BH Extintores."
     }
   },
   "contact": {

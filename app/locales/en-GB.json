@@ -58,12 +58,14 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "client_projects_title": "Client Projects",
     "view_details": "View Details",
     "visit_project": "Visit Project",
     "no_description": "No description available for this project.",
     "error_message": "Failed to load projects. Please try again later.",
     "descriptions": {
-      "FireHosting v2": "A complete, high-performance web hosting platform with billing integration, server management, and automated deployments."
+      "FireHosting v2": "A complete, high-performance web hosting platform with billing integration, server management, and automated deployments.",
+      "BH Extintores Website": "Institutional website for the BH Extintores company."
     }
   },
   "contact": {
