@@ -1,8 +1,6 @@
-export default defineNuxtRouteMiddleware(async (to) => {
+export default defineNuxtRouteMiddleware((to) => {
   const lg = to.query.lg
   if (!lg || typeof lg !== 'string') return
-
-  const { setLocale } = useI18n()
 
   const targetLang = lg.toLowerCase()
   let codeToSet = ''
@@ -13,14 +11,15 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
   if (!codeToSet) return
 
-  await setLocale(codeToSet)
+  const cookie = useCookie('i18n_redirected', { maxAge: 60 * 60 * 24 * 365, path: '/' })
+  cookie.value = codeToSet
 
   if (import.meta.client) {
+    const { setLocale } = useI18n()
+    setLocale(codeToSet)
     const newQuery = { ...to.query }
     delete newQuery.lg
     const queryString = new URLSearchParams(newQuery as Record<string, string>).toString()
-    const cleanUrl = to.path + (queryString ? `?${queryString}` : '')
-    history.replaceState(history.state, '', cleanUrl)
+    history.replaceState(history.state, '', to.path + (queryString ? `?${queryString}` : ''))
   }
 })
-
