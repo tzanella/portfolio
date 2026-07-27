@@ -26,12 +26,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "pt",
     strategy: "no_prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      alwaysRedirect: false,
-      redirectOn: "root",
-    },
+    detectBrowserLanguage: false,
   },
   runtimeConfig: {
     discordWebhookUrl: process.env.NUXT_DISCORD_WEBHOOK_URL,
