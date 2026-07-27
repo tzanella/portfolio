@@ -24,12 +24,12 @@ export default defineNuxtConfig({
       { code: "es", language: "es-ES", file: "es.json", name: "Español" },
       { code: "it", language: "it-IT", file: "it.json", name: "Italiano" },
     ],
-    defaultLocale: "en",
+    defaultLocale: "pt",
     strategy: "no_prefix",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: "root",
+      redirectOn: "no_redirect",
     },
   },
   runtimeConfig: {

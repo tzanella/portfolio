@@ -25,23 +25,9 @@ export default defineNuxtRouteMiddleware((to) => {
 
     const targetPath = to.path === '/lang' ? '/' : to.path
 
-    if (import.meta.client) {
-      if (codeToSet) {
-        const { setLocale } = useI18n()
-        setLocale(codeToSet)
-      }
-      const url = new URL(window.location.href)
-      url.pathname = targetPath
-      url.searchParams.delete('lg')
-      window.history.replaceState({}, '', url.pathname + url.search)
-      if (to.path === '/lang') {
-        return navigateTo({ path: '/', query: newQuery }, { replace: true })
-      }
-    } else {
-      return navigateTo({
-        path: targetPath,
-        query: newQuery
-      }, { replace: true })
-    }
+    return navigateTo({
+      path: targetPath,
+      query: newQuery
+    }, { replace: true })
   }
 })
